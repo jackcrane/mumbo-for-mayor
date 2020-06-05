@@ -86,3 +86,13 @@ body,html {
   font-family:p22;
   src:url(p22.otf);
 }
+
+@media only screen and (max-width:580px)  {
+  h1 {
+    font-size: 4em!important;
+  }
+  .stache {
+    width:80%;
+    max-width:400px;
+  }
+}
