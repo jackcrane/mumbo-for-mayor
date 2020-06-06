@@ -143,13 +143,13 @@ body,html {
 }
 
 @media only screen and (max-width:460px)  {
-  .testamonials {
+  .latest-video {
     display:none;
   }
 }
 
 @media only screen and (max-width:315px)  {
-  .latest-video {
+  .testamonials {
     display:none;
   }
 }
