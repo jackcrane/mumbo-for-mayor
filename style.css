@@ -67,7 +67,7 @@ body,html {
   text-align:center;
 }
 
-.topnav a:active,.topnav a:hover {
+.topnav a:hover,.topnav a:active {
   color:red;
 }
 
@@ -81,7 +81,7 @@ body,html {
   display:block;
 }
 
-.topnav a:hover .topnav-stache {
+.topnav a:hover .topnav-stache, .topnav a:active .topnav-stache {
   /* display:inline-block; */
   height:15px;
 }
