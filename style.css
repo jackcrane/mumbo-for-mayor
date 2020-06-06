@@ -1,3 +1,7 @@
+*:focus {
+  outline:none;
+}
+
 body,html {
   padding:0;
   margin:0;
@@ -82,6 +86,47 @@ body,html {
   height:15px;
 }
 
+.testamonial-stache {
+  max-height:20px;
+}
+
+.video {
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid lightgrey;
+  border-radius:15px;
+  padding:3%;
+  overflow:auto;
+  margin-bottom:5%;
+}
+
+.video video,.video img {
+  width:100%;
+  /* width:40%;
+  float:left; */
+}
+
+.video td:nth-child(1) {
+  width:40%;
+}
+
+.video td:nth-child(2) {
+  width:60%;
+  text-align:left;
+  padding-left:5%;
+}
+
+.video .text span {
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.cite {
+  float:right;
+  color:grey;
+}
+
 @font-face {
   font-family:p22;
   src:url(p22.otf);
@@ -94,5 +139,17 @@ body,html {
   .stache {
     width:80%;
     max-width:400px;
+  }
+}
+
+@media only screen and (max-width:460px)  {
+  .testamonials {
+    display:none;
+  }
+}
+
+@media only screen and (max-width:315px)  {
+  .latest-video {
+    display:none;
   }
 }
