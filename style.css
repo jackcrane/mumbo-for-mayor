@@ -86,6 +86,81 @@ body,html {
   height:15px;
 }
 
+.search {
+  height: 6vh;
+}
+
+.search a {
+  display:table-cell;
+  vertical-align:middle;
+  color:grey;
+  text-decoration:none;
+  transition:.3s;
+  text-align:center;
+}
+
+.search a:hover,.search a:active {
+  color:red;
+}
+
+.search .search-stache {
+  /* display:none; */
+  /* max-height:15px; */
+  margin-left:auto;
+  margin-right:auto;
+  height:0px;
+  transition:.3s;
+  display:block;
+}
+
+.search a:hover .search-stache, .search a:active .search-stache {
+  /* display:inline-block; */
+  height:15px;
+}
+
+.input {
+  font-size:1.2em;
+  font-family:inherit;
+  width:50%;
+  text-align:center;
+  outline:none;
+  border:none;
+  border-bottom:2px solid lightgrey
+}
+
+.grumbot {
+  max-height:200px;
+}
+
+.responsecontainer {
+  font-size:1.5em;
+  font-family:consolas;
+  color:#39ff14;
+  background-color:black;
+  text-align:left;
+  -webkit-box-shadow: 0px 0px 15px 15px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 15px 15px rgba(0,0,0,1);
+  box-shadow: 0px 0px 15px 15px rgba(0,0,0,1);
+  /* overflow:hidden; */
+}
+
+.signature {
+  position:absolute;
+  bottom:0;
+  right:0;
+  padding:25px;
+  color:lightgrey!important;
+}
+
+.signature a {
+  color:lightgrey;
+  transition:.3s;
+}
+
+.signature a:hover {
+  color:darkgrey;
+}
+
 .testamonial-stache {
   max-height:20px;
 }
@@ -125,6 +200,17 @@ body,html {
 .cite {
   float:right;
   color:grey;
+}
+
+.io {
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid lightgrey;
+  border-radius:15px;
+  padding:3%;
+  overflow:auto;
+  margin-bottom:5%;
 }
 
 @font-face {

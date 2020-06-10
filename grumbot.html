@@ -51,23 +51,68 @@
       </div>
     </section>
     <div class="vc-cont">
-      <header class="content">
+      <header class="testamonial-content">
         <center>
-        <h1>MUMBO<br>FOR<br>MAYOR</h1>
-        <img src="stache.svg" class="stache"><br><br><br>
+          <h1>Mumbo For Mayor</h1>
+          <img src="stache.svg" class="testamonial-stache">
+          <h2>Ask Grumbot</h2>
+          <img src="grumbot.svg" class="grumbot">
+        </center>
+      </header>
+
+      <section class="io">
+        <input type="text" class="input" id="input" placeholder="Ask Grumbot a Question!">
         <div class="search">
           <div class="btn-parent latest-video">
             <div class="btn-content">
-              <a href="grumbot.html">
-                <span>Ask Grumbot a Question!</span><br>
+              <a href="javascript:ask()">
+                <span>Ask Grumbot</span><br>
                 <img src="stache.svg" class="search-stache">
               </a>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="io">
+        <div class="responsecontainer" id="output">
+        </div>
+      </section>
+
+      <script>
+        const gb_answer_map = {
+          1:"Give Grumbot more budget",
+          2:"Mumbo for mayor",
+          3:"Film a commercial"
+        }
+        let lastNumber
+        function ask() {
+          let question = document.getElementById("input")
+          if(question.value!="") {
+            let response = document.getElementById("output")
+            let responsekey = gb_answer_map[getRandNumber()]
+            let outputspan = document.createElement("span")
+            outputspan.innerText = "> Q: " + question.value + " A: " + responsekey + "\n"
+            response.insertBefore(outputspan,response.firstChild)
+            question.value=""
+          }
+        }
+        function getRandNumber() {
+          var x = Math.floor((Math.random() * 3) + 1);
+          if (x === lastNumber) {
+            return getRandNumber()
+          }
+          return x
+        }
+      </script>
+
+      <!-- <header class="content">
+        <center>
+        <h1>MUMBO<br>FOR<br>MAYOR</h1>
+        <img src="stache.svg" class="stache">
+        <h2>Testamonials</h2>
         </center>
-      </header>
+      </header> -->
     </div>
-    <span class="signature">Made by Jack Crane (<a href="https://github.com/jackcrane">@jackcrane</a>)</span>
   </body>
 </html>
